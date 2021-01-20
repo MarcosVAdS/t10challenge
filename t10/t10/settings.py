@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import psycopg2.extensions
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,6 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'user',
+    'partner',
+    'debit_request',
+    'drf_yasg',
+    'psycopg2'
 ]
 
 MIDDLEWARE = [
@@ -75,9 +81,13 @@ WSGI_APPLICATION = 't10.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 't10',
+        'USER': 'postgres',
+        'PASSWORD': 'r00t',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    },
 }
 
 

@@ -1,16 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.contrib.auth import authenticate, login
+
 # Create your views here.
+def create_user(request):
+    return HttpResponse('<h1>Create User')
 
 def login(request):
-    username = request.POST['username']
-    password = request.POST['password']
-    user = authenticate(request, username=username, password=password)
-    if user is not None:
-        return HttpResponse("Login!")
-    else:
-        return HttpResponse("Ops, error")
+    return HttpResponse('<h1>Login')
 
 def logout(request):
-    return HttpResponse("Ops, logout")
+    return HttpResponse('<h1>Logout')
+
+def deactivate_user(request):
+    return HttpResponse('<h1>Deactivate User')

@@ -1,0 +1,25 @@
+user
+- name
+- email
+- password
+- is_super
+- is_enable
+- created_at
+- updated_at
+
+partner
+- name
+- cnpj
+- use_automatic_debt
+- is_enable
+- created_at
+- updated_at
+
+automatic_debt_request
+- requester (user)
+- target (patner)
+- super_user
+- status (waiting/canceled/approved/rejected)
+- is_enable
+- created_at
+- updated_at
