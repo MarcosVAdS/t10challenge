@@ -23,3 +23,18 @@ automatic_debt_request
 - is_enable
 - created_at
 - updated_at
+
+
+Routes
+- /user/
+- /user/{id}/
+
+- /partner/
+- /partner/{id}/
+
+
+EVENT
+- /request/
+- /cancel/{id}/
+- /approve/{id}/
+- /reject/{id}/
